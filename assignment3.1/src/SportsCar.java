@@ -1,4 +1,4 @@
-public class Car {
+public class SportsCar {
     private double speed;
     private double gasolineLevel;
     private String typeName;
@@ -7,7 +7,7 @@ public class Car {
     /* This is the method (constructor) called when a new instance of Car is created (with new).
      * Constructors may also have arguments.
      */
-    public Car(String typeName) {
+    public SportsCar(String typeName) {
         speed = 0; gasolineLevel = 0;
         this.typeName = typeName;
     }
@@ -16,10 +16,11 @@ public class Car {
      * Note that methods refer to and change instance variable values.
      */
     public void accelerate() {
-        if (gasolineLevel > 0)
-            speed += 10;
-        else
-            speed = 0;
+        if (gasolineLevel > 0) {
+            speed += 20;
+            gasolineLevel -= 3;}
+        else {
+            speed = 0;}
     }
     void decelerate(int amount) {
         if (gasolineLevel > 0) {
@@ -40,7 +41,7 @@ public class Car {
     double getGasolineLevel() {
         return gasolineLevel;
     }
-    public Car(String typeName, double gasolineLevel, double speed) {
+    public SportsCar(String typeName, double gasolineLevel, double speed) {
         this.typeName = typeName;
         this.gasolineLevel = gasolineLevel;
         this.speed = speed;

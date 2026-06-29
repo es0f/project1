@@ -2,17 +2,14 @@ public class CoffeeMaker {
     private boolean on;
     private String coffeeType;
     private int coffeeAmount;
-
     public CoffeeMaker() {
         on = false;
         coffeeType = "normal";
         coffeeAmount = 10;
     }
-
     public void pressOnOff() {
         on = !on;
     }
-
     public boolean isOn() {
         return on;
     }
